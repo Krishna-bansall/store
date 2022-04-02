@@ -1,0 +1,10 @@
+import { getAllProducts } from '../../lib/shopify'
+export default function ProductPage({ product }) {
+  return <div>ProductPage</div>
+}
+
+export async function getStaticPaths() {
+    const products = await getAllProducts()
+    const paths = products.map(item => {const handle = String(item.node.handle) ; retun handle})
+  return { paths: {} }
+}

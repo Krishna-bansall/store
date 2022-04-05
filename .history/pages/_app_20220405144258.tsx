@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <html>
-      <body className=''>
+      <body className='overflow-hidden'>
         <Layout>
           <Component {...pageProps} />
         </Layout>

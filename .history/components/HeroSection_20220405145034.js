@@ -11,17 +11,17 @@ function HeroSection() {
       </div>
       <div className="flex w-full md:grid md:grid-cols-3">
         <div className="z-10 flex w-screen flex-col items-center justify-center border-2 px-10 text-center md:col-span-2 md:items-start md:px-20 md:text-left">
-          <div className="-translate-y-1/3">
-            <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-4xl 2xl:text-5xl">
+          <div className="md:-translate-y-1/3">
+            <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-3xl">
               The NextJs eCommerce
             </div>
             <div
-              className="mb-3 max-w-full bg-gradient-to-r from-orange-400 via-purple-400 to-pink-600 bg-clip-text
-            text-4xl font-black text-transparent drop-shadow-lg md:text-8xl md:tracking-wide 2xl:text-9xl"
+              className="mb-3 max-w-xl bg-gradient-to-r from-orange-400 via-purple-400 to-pink-600 bg-clip-text
+            text-4xl font-black text-transparent drop-shadow-lg md:text-7xl md:tracking-wide"
             >
               Fast & Modern
             </div>
-            <div className="text-sm text-gray-500 md:text-2xl 2xl:text-3xl">
+            <div className="text-sm text-gray-500 md:text-xl">
               Powered By Shopify CMS
             </div>
           </div>

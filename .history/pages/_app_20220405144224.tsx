@@ -4,13 +4,13 @@ import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <html>
-      <body className=''>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </body>
-    </html>
+  <html>
+  <body>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </body>
+  </html>
     )
 }
 

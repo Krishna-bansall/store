@@ -21,7 +21,7 @@ function HeroSection() {
             >
               Fast & Modern
             </div>
-            <div className="text-sm text-gray-500 md:text-2xl 2xl:text-3xl">
+            <div className="text-sm text-gray-500 md:text-xl 2xl:text-3xl">
               Powered By Shopify CMS
             </div>
           </div>

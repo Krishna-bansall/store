@@ -10,7 +10,7 @@ function HeroSection() {
         <div className="absolute min-h-full w-full bg-gradient-to-bl from-pink-100 via-white to-transparent md:w-1/2 md:bg-gradient-to-l"></div>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-3">
-        <div className="z-10 flex flex-col items-center justify-center border-2 px-10 text-center md:col-span-2 md:items-start md:px-20 md:text-left">
+        <div className="z-10 flex flex-col items-center justify-center border-2 px-10 text-center md:col-span-2 md:text-left">
           <div className="md:-translate-y-1/2">
             <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-3xl">
               The NextJs eCommerce

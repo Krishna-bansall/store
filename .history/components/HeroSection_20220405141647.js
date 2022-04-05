@@ -10,14 +10,14 @@ function HeroSection() {
         <div className="absolute min-h-full w-full bg-gradient-to-bl from-pink-100 via-white to-transparent md:w-1/2 md:bg-gradient-to-l"></div>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-3">
-        <div className="z-10 flex flex-col items-center justify-center border-2 px-10 text-center md:col-span-2 md:items-start md:px-20 md:text-left">
+        <div className="z-10 flex flex-col justify-center border-2 px-10 text-center md:col-span-2 md:items-center md:text-left">
           <div className="md:-translate-y-1/2">
             <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-3xl">
               The NextJs eCommerce
             </div>
             <div
               className="mb-3 max-w-xl bg-gradient-to-r from-orange-400 via-purple-400 to-pink-600 bg-clip-text
-            text-4xl font-black text-transparent drop-shadow-lg md:text-7xl md:tracking-wide"
+            text-5xl font-black tracking-wide text-transparent drop-shadow-lg md:text-7xl"
             >
               Fast & Modern
             </div>

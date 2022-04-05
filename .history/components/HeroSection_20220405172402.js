@@ -12,29 +12,40 @@ function HeroSection() {
       <div className="flex w-full md:grid md:grid-cols-3">
         <div className="z-10 flex w-screen flex-col items-center justify-center border-2 px-10 text-center md:col-span-2 md:items-start md:px-20 md:text-left">
           <div className="-translate-y-1/3">
-            <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-2xl lg:text-3xl 2xl:text-5xl">
+            <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-4xl 2xl:text-5xl">
               The NextJs eCommerce
             </div>
             <div
               className="mb-3 max-w-full bg-gradient-to-r from-orange-400 via-purple-400 to-pink-600 bg-clip-text
-            text-4xl font-black text-transparent drop-shadow-lg md:text-6xl md:tracking-wide lg:text-8xl 2xl:text-9xl"
+            text-4xl font-black text-transparent drop-shadow-lg md:text-8xl md:tracking-wide 2xl:text-9xl"
             >
               Fast & Modern
             </div>
-            <div className="text-sm text-gray-500 md:text-xl 2xl:text-3xl">
+            <div className="text-sm text-gray-500 md:text-2xl 2xl:text-3xl">
               Powered By Shopify CMS
             </div>
           </div>
         </div>
-        <div className="hidden max-h-screen w-full items-center  justify-center border-2 md:flex">
-          <div className="relative  w-full">
-            <Image className="" src={rocket} alt="Rocket" layout="responsive" />
+        <div className="hidden max-h-screen w-full items-center  justify-center border-2 bg-slate-500 md:flex">
+          {/* <Image className="absolute top-0  " src={rocket} alt="Rocket" />
+          <Image className="absolute top-0  " src={machine} alt="machine" />
+          <Image className="absolute top-0 " src={cursor} alt="cursor" /> */}
+          <div className="relative h-2/3 w-2/3 ">
+            <Image
+              className=""
+              src={rocket}
+              alt="Rocket"
+              height={1000}
+              width={800}
+              layout="fill"
+            />
             <div className="absolute -right-5 -top-10 h-1/2 w-1/2">
               <Image
                 className=""
                 src={machine}
                 alt="machine"
-                layout="responsive"
+                height={100}
+                width={100}
               />
             </div>
             <div className="absolute -bottom-0 h-1/2 w-1/2">
@@ -42,7 +53,8 @@ function HeroSection() {
                 className=""
                 src={cursor}
                 alt="cursor"
-                // layout="responsive"
+                height={100}
+                width={100}
               />
             </div>
           </div>

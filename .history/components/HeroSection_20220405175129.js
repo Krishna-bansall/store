@@ -27,7 +27,7 @@ function HeroSection() {
           </div>
         </div>
         <div className="hidden max-h-screen w-full items-center  justify-center border-2 md:flex">
-          <div className="relative  w-full">
+          <div className="w-ful  relative">
             <Image className="" src={rocket} alt="Rocket" layout="responsive" />
             <div className="absolute -right-5 -top-10 h-1/2 w-1/2">
               <Image

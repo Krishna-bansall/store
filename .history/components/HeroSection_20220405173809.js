@@ -27,7 +27,10 @@ function HeroSection() {
           </div>
         </div>
         <div className="hidden max-h-screen w-full items-center  justify-center border-2 md:flex">
-          <div className="relative  w-full">
+          {/* <Image className="absolute top-0  " src={rocket} alt="Rocket" />
+          <Image className="absolute top-0  " src={machine} alt="machine" />
+          <Image className="absolute top-0 " src={cursor} alt="cursor" /> */}
+          <div className="relative h-2/3 w-2/3 ">
             <Image className="" src={rocket} alt="Rocket" layout="responsive" />
             <div className="absolute -right-5 -top-10 h-1/2 w-1/2">
               <Image
@@ -42,7 +45,7 @@ function HeroSection() {
                 className=""
                 src={cursor}
                 alt="cursor"
-                // layout="responsive"
+                layout="responsive"
               />
             </div>
           </div>

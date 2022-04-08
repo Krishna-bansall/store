@@ -47,7 +47,7 @@ function HeroSection() {
         </div>
 
         <div className="col-start-3 row-start-2 grid md:col-start-2 md:row-start-3">
-          <div className="flex items-start md:w-[clamp(3rem,7rem,10rem)] xl:ml-6">
+          <div className="flex w-[clamp(3rem,7rem,10rem)] items-start xl:ml-6">
             <Image
               className="-rotate-45 md:rotate-0"
               src={cursor}

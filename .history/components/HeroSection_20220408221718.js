@@ -12,7 +12,7 @@ function HeroSection() {
       px-4 py-20 md:grid-cols-[2fr_1fr] md:grid-rows-[1fr_2fr_2fr] md:px-20"
       >
         <div className="col-start-2 row-start-2 flex h-full items-center justify-center text-center md:col-start-1 md:justify-start md:text-left">
-          <div className="absolute -translate-y-1/2 md:translate-y-0">
+          <div className="absolute">
             <div className="mb-1 max-w-xl text-lg font-semibold tracking-wide md:text-2xl lg:text-3xl 2xl:text-5xl">
               The NextJs eCommerce
             </div>
@@ -46,13 +46,9 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="col-start-3 row-start-2 grid md:col-start-2 md:row-start-3">
-          <div className="flex items-start md:w-[clamp(3rem,7rem,10rem)] xl:ml-6">
-            <Image
-              className="-rotate-45 md:rotate-0"
-              src={cursor}
-              alt="Cursor"
-            />
+        <div className="col-start-2 row-start-3 grid">
+          <div className="flex w-[clamp(3rem,7rem,10rem)] items-start xl:ml-6">
+            <Image className="" src={cursor} alt="Cursor" />
           </div>
         </div>
       </div>

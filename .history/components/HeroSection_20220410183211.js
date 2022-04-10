@@ -40,7 +40,7 @@ function HeroSection() {
       className="relative grid h-screen grid-cols-2 bg-white"
     >
       <motion.div
-        // variants={stagger}
+        variants={stagger}
         className="z-10 col-span-2 grid max-h-screen grid-cols-[1fr_3fr_1fr] grid-rows-[3fr_2fr_3fr] 
       px-4 py-20 md:grid-cols-[2fr_1fr] md:grid-rows-[1fr_2fr_2fr] md:px-20"
       >

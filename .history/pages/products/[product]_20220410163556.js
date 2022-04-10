@@ -7,7 +7,7 @@ export default function ProductPage({ product }) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
     >
       <div className="min-h-screen py-12 sm:pt-20">
         <ProductPageContent product={product} />

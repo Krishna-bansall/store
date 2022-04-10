@@ -1,7 +1,7 @@
 import ProductCard from './ProductCard'
 
 function ProductList(products) {
-  return (
+  return -(
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="mb-6 text-2xl font-extrabold text-gray-900">Product</h2>

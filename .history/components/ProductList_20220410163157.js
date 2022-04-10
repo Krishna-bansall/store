@@ -1,8 +1,14 @@
 import ProductCard from './ProductCard'
+import { motion } from 'framer-motion'
 
 function ProductList(products) {
   return (
-    <div className="bg-white">
+    <motion.div
+      className="bg-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, backgroundColor: '#aaa' }}
+    >
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="mb-6 text-2xl font-extrabold text-gray-900">Product</h2>
 
@@ -13,7 +19,7 @@ function ProductList(products) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

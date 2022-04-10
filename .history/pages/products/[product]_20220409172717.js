@@ -1,18 +1,11 @@
 import ProductPageContent from '../../components/ProductPageContent'
 import { getAllProducts, getProduct } from '../../lib/shopify'
-import { motion } from 'framer-motion'
 
 export default function ProductPage({ product }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-    >
-      <div className="min-h-screen py-12 sm:pt-20">
-        <ProductPageContent product={product} />
-      </div>
-    </motion.div>
+    <div className="min-h-screen py-12 sm:pt-20">
+      <ProductPageContent product={product} />
+    </div>
   )
 }
 

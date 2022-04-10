@@ -1,6 +1,5 @@
 import ProductList from '../components/ProductList'
 import { getProductInCollection, getProduct } from '../lib/shopify'
-import { motion } from 'framer-motion'
 
 export default function Products({ products }) {
   return (

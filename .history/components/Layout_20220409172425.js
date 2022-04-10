@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <div className="flex flex-col justify-between">
       <Nav />
-      <div className="overflow-hidden">
+      <div className="">
         <main>{children}</main>
         <footer>Footer</footer>
       </div>

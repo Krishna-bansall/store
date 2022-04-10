@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import ProductForm from './ProductForm'
 
 export default function ProductPageContent({ product }) {
   console.log(product)
@@ -13,12 +12,11 @@ export default function ProductPageContent({ product }) {
           <Image
             src={product.images.edges[0].node.url}
             alt={product.images.edges[0].node.altText}
-            layout="fill"
-            objectFit="cover"
+            height={3}
           ></Image>
         </div>
+        {product.title}
       </div>
-      <ProductForm product={product} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
-// import { getProductInCollection, getProduct } from '../lib/shopify'
-import ProductList from '../components/ProductList'
+import { getProductInCollection, getProduct } from '../lib/shopify'
+// import ProductList from '../components/ProductList'
 import HeroSection from '../components/HeroSection'
 
 const Home = ({ products }) => {
@@ -16,6 +16,6 @@ const Home = ({ products }) => {
 //   return {
 //     props: { products }, // will be passed to the page component as props
 //   }
-// }
+}
 
 export default Home

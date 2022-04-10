@@ -35,8 +35,8 @@ function HeroSection() {
         </div>
 
         <div className="col-start-2 row-start-1 hidden items-start md:visible md:row-start-2 md:grid ">
-          <div className="absolute grid max-w-xs self-center justify-self-end lg:max-w-full">
-            <Image className="" src={rocket} alt="Rocket" />
+          <div className="absolute grid  self-center justify-self-end">
+            <Image className="w-1/4" src={rocket} alt="Rocket" />
           </div>
         </div>
 

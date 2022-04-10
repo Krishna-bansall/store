@@ -2,7 +2,6 @@ import Image from 'next/image'
 import ProductForm from './ProductForm'
 
 export default function ProductPageContent({ product }) {
-  console.log(product)
   return (
     <div
       className="mx-auto flex w-11/12 max-w-6xl flex-col items-center justify-center

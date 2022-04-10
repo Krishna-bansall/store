@@ -105,10 +105,7 @@ export const getProduct = async (handle) => {
               name
               value
             }
-            product {
-              title
-              handle
-            }
+            
             image{
               url
               altText

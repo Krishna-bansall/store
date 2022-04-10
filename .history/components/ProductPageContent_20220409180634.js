@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import ProductForm from './ProductForm'
+import ReactImageMagnify from 'react-image-magnify'
 
 export default function ProductPageContent({ product }) {
-  console.log(product)
   return (
     <div
       className="mx-auto flex w-11/12 max-w-6xl flex-col items-center justify-center
@@ -10,12 +10,19 @@ export default function ProductPageContent({ product }) {
     >
       <div className="w-full max-w-md overflow-hidden rounded-2xl border bg-white shadow-lg md:w-1/2">
         <div className="relative h-96 w-full">
-          <Image
-            src={product.images.edges[0].node.url}
-            alt={product.images.edges[0].node.altText}
-            layout="fill"
-            objectFit="cover"
-          ></Image>
+          <ReactImageMagnify
+            {...{
+              smallImage: {
+                src: `${product.images.edges[0].node.url}`,
+                alt: `${product.images.edges[0].node.altText}`,
+                isFluid: true,
+                width: 100,
+                height: 100,
+                // layout:"fill",
+                // objectFit:"cover",
+              },
+            }}
+          />
         </div>
       </div>
       <ProductForm product={product} />

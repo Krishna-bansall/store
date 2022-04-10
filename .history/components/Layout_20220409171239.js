@@ -3,7 +3,7 @@ import Nav from './Nav'
 import HeroSection from './HeroSection'
 function Layout({ children }) {
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex min-h-screen flex-col justify-between">
       <Nav />
       <div className="overflow-hidden">
         <main>{children}</main>

@@ -6,7 +6,7 @@ const Home = ({ products }) => {
   return (
     <div className="">
       <HeroSection />
-      {/* <ProductList product={products} />{' '} */}
+      <ProductList product={products} />{' '}
     </div>
   )
 }

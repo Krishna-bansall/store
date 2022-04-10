@@ -1,7 +1,6 @@
-import React, { children } from 'react'
+import React, { Children } from 'react'
 import Nav from './Nav'
-import { AnimatePresence } from 'framer-motion'
-
+import HeroSection from './HeroSection'
 function Layout({ children }) {
   return (
     <div className="flex flex-col justify-between">

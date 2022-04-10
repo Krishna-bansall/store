@@ -1,4 +1,4 @@
-import React, { children } from 'react'
+import React, { Children } from 'react'
 import Nav from './Nav'
 import { AnimatePresence } from 'framer-motion'
 

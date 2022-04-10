@@ -23,7 +23,7 @@ const fadeInUp = {
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -69,36 +69,34 @@ function ProductForm({ product }) {
       exit="exit"
       className="md:1/3 flex w-full flex-col rounded-2xl p-4 shadow-lg"
     >
-      <motion.div variants={stagger}>
-        <motion.h2 variants={fadeInUp} className="text-2xl font-bold">
-          {product.title}
-        </motion.h2>
-        <motion.span variants={fadeInUp} className="pb-6">
-          {formatter.format(product.variants.edges[0].node.priceV2.amount)}
-        </motion.span>
+      <motion.h2 variants={fadeInUp} className="text-2xl font-bold">
+        {product.title}
+      </motion.h2>
+      <motion.span variants={fadeInUp} className="pb-6">
+        {formatter.format(product.variants.edges[0].node.priceV2.amount)}
+      </motion.span>
 
-        <div className="pt-2 pb-5">
-          {product.options.map(({ name, values }) => (
-            <motion.div variants={fadeInUp}>
-              <ProductOptions
-                key={`key-${name}`}
-                name={name}
-                values={values}
-                selectedOptions={selectedOptions}
-                setOptions={setOptions}
-              />
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.button
-          variants={fadeInUp}
-          className="w-full rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
-        >
-          {' '}
-          Add To Cart
-        </motion.button>
+      <motion.div className="pt-2 pb-10" variants={stagger}>
+        {product.options.map(({ name, values }) => (
+          <motion.div variants={fadeInUp}>
+            <ProductOptions
+              key={`key-${name}`}
+              name={name}
+              values={values}
+              selectedOptions={selectedOptions}
+              setOptions={setOptions}
+            />
+          </motion.div>
+        ))}
       </motion.div>
+
+      <motion.button
+        variants={fadeInUp}
+        className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
+      >
+        {' '}
+        Add To Cart
+      </motion.button>
     </motion.div>
   )
 }

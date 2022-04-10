@@ -23,7 +23,7 @@ const fadeInUp = {
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -77,7 +77,7 @@ function ProductForm({ product }) {
           {formatter.format(product.variants.edges[0].node.priceV2.amount)}
         </motion.span>
 
-        <div className="pt-2 pb-5">
+        <motion.div className="pt-2 pb-10" variants={stagger}>
           {product.options.map(({ name, values }) => (
             <motion.div variants={fadeInUp}>
               <ProductOptions
@@ -89,11 +89,11 @@ function ProductForm({ product }) {
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.button
           variants={fadeInUp}
-          className="w-full rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
+          className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
         >
           {' '}
           Add To Cart

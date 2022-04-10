@@ -17,7 +17,7 @@ const fadeInUp = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 2,
+      duration: 0.6,
       ease: easing,
     },
   },
@@ -26,7 +26,7 @@ const fadeInUp = {
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
     },
   },
 }
@@ -34,16 +34,16 @@ const stagger = {
 function HeroSection() {
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="relative grid h-screen grid-cols-2 bg-white"
     >
-      <motion.div
+      <div
         className="z-10 col-span-2 grid max-h-screen grid-cols-[1fr_3fr_1fr] grid-rows-[3fr_2fr_3fr] 
       px-4 py-20 md:grid-cols-[2fr_1fr] md:grid-rows-[1fr_2fr_2fr] md:px-20"
       >
-        <motion.div className="col-start-2 row-start-2 flex h-full items-center justify-center text-center md:col-start-1 md:justify-start md:text-left">
+        <div className="col-start-2 row-start-2 flex h-full items-center justify-center text-center md:col-start-1 md:justify-start md:text-left">
           <motion.div
             variants={stagger}
             className="absolute -translate-y-1/2 md:translate-y-0"
@@ -68,7 +68,7 @@ function HeroSection() {
               Powered By Shopify CMS
             </motion.p>
           </motion.div>
-        </motion.div>
+        </div>
 
         <div className="col-start-3 flex justify-start md:col-start-2 md:justify-center">
           <div className="flex w-full items-end md:w-[clamp(3rem,7rem,10rem)] xl:ml-6">
@@ -111,7 +111,7 @@ function HeroSection() {
             </Link>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       <div
         className="absolute col-start-2 h-full w-full bg-gradient-to-bl from-pink-100

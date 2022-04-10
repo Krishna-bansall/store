@@ -23,7 +23,7 @@ const fadeInUp = {
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.6,
     },
   },
 }
@@ -77,7 +77,7 @@ function ProductForm({ product }) {
           {formatter.format(product.variants.edges[0].node.priceV2.amount)}
         </motion.span>
 
-        <div className="pt-2 pb-5">
+        <div className="pt-2 pb-10">
           {product.options.map(({ name, values }) => (
             <motion.div variants={fadeInUp}>
               <ProductOptions

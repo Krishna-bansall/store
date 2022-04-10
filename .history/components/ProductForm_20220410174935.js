@@ -2,7 +2,6 @@ import { useState, useContext } from 'react'
 import { formatter } from '../utils/helpers'
 import ProductOptions from './ProductOptions'
 import { motion } from 'framer-motion'
-
 const easing = [0.6, -0.5, 0.01, 0.99]
 
 const fadeInUp = {
@@ -27,7 +26,6 @@ const stagger = {
     },
   },
 }
-
 function ProductForm({ product }) {
   const allVariantOptions = product?.variants.edges?.map((variant) => {
     const allOptions = {}
@@ -69,34 +67,26 @@ function ProductForm({ product }) {
       exit="exit"
       className="md:1/3 flex w-full flex-col rounded-2xl p-4 shadow-lg"
     >
-      <motion.h2 variants={fadeInUp} className="text-2xl font-bold">
+      <motion.h2 variants={FadeInUp} className="text-2xl font-bold">
         {product.title}
       </motion.h2>
-      <motion.span variants={fadeInUp} className="pb-6">
+      <span className="pb-6">
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
-      </motion.span>
+      </span>
+      {product.options.map(({ name, values }) => (
+        <ProductOptions
+          key={`key-${name}`}
+          name={name}
+          values={values}
+          selectedOptions={selectedOptions}
+          setOptions={setOptions}
+        />
+      ))}
 
-      <motion.div className="pt-2 pb-10" variants={stagger}>
-        {product.options.map(({ name, values }) => (
-          <motion.div variants={fadeInUp}>
-            <ProductOptions
-              key={`key-${name}`}
-              name={name}
-              values={values}
-              selectedOptions={selectedOptions}
-              setOptions={setOptions}
-            />
-          </motion.div>
-        ))}
-      </motion.div>
-
-      <motion.button
-        variants={fadeInUp}
-        className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
-      >
+      <button className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800">
         {' '}
         Add To Cart
-      </motion.button>
+      </button>
     </motion.div>
   )
 }

@@ -76,7 +76,7 @@ function ProductForm({ product }) {
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
       </motion.span>
 
-      <motion.div className="pt-2 pb-10" variants={stagger}>
+      <motion.div variants={stagger}>
         {product.options.map(({ name, values }) => (
           <motion.div variants={fadeInUp}>
             <ProductOptions
@@ -90,13 +90,10 @@ function ProductForm({ product }) {
         ))}
       </motion.div>
 
-      <motion.button
-        variants={fadeInUp}
-        className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
-      >
+      <button className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800">
         {' '}
         Add To Cart
-      </motion.button>
+      </button>
     </motion.div>
   )
 }

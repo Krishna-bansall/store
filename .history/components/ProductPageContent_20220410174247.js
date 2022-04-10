@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import ProductForm from './ProductForm'
 import { motion } from 'framer-motion'
 

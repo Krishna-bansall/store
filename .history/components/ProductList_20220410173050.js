@@ -21,7 +21,7 @@ const fadeInUp = {
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.5,
     },
   },
 }
@@ -35,17 +35,15 @@ function ProductList(products) {
             Product
           </h2>
 
-          <motion.div
-            variants={stagger}
-            className="grid grid-cols-1 gap-y-10 gap-x-6 
-            sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-          >
-            {products.product.map((item) => (
-              <motion.div variants={fadeInUp}>
-                <ProductCard key={item.node.id} product={item} />
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            <motion.div variants={stagger}>
+              {products.product.map((item) => (
+                <motion.div variants={fadeInUp}>
+                  <ProductCard key={item.node.id} product={item} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </motion.div>

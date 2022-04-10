@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import ProductForm from './ProductForm'
 import { motion } from 'framer-motion'
 
@@ -16,8 +17,8 @@ export default function ProductPageContent({ product }) {
         <div className="w-full max-w-md overflow-hidden rounded-2xl border bg-white shadow-lg md:w-1/2">
           <div className="relative h-96 w-full">
             <motion.img
-              initial={{ opacity: 0, scale: 2 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 200 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
               src={`${product.images.edges[0].node.url}`}
               alt={product.images.edges[0].node.altText}

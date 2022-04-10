@@ -90,13 +90,10 @@ function ProductForm({ product }) {
         ))}
       </motion.div>
 
-      <motion.button
-        variants={fadeInUp}
-        className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
-      >
+      <button className="rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800">
         {' '}
         Add To Cart
-      </motion.button>
+      </button>
     </motion.div>
   )
 }

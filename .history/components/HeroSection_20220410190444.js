@@ -116,7 +116,7 @@ function HeroSection() {
       </motion.div>
 
       <div
-        className="absolute col-start-2 h-full w-full bg-gradient-to-bl from-pink-100 via-white
+        className="absolute col-start-2 h-full w-full bg-gradient-to-bl from-pink-100
          to-white md:bg-gradient-to-l"
       ></div>
     </motion.div>

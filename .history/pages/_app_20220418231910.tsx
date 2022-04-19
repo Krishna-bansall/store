@@ -5,11 +5,10 @@ import Layout from '../components/Layout'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
   return (
     <ShopProvider>
         <Layout>
-          <Component {...pageProps} key={router.asPath}/>
+          <Component {...pageProps} />
         </Layout>
     </ShopProvider>
     )

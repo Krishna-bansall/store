@@ -23,22 +23,6 @@ const fadeInUp = {
   },
 }
 
-const delayFadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 2.3,
-      duration: 1,
-      ease: easing,
-    },
-  },
-}
-
 const stagger = {
   animate: {
     transition: {
@@ -94,12 +78,9 @@ function HeroSection() {
         </div>
 
         <div className="col-start-2 row-start-1 hidden items-start md:visible md:row-start-2 md:grid ">
-          <motion.div
-            // animate={{ x: [0, 200, 0] }}
-            className="absolute grid max-w-xs self-center justify-self-end lg:max-w-full"
-          >
+          <div className="absolute grid max-w-xs self-center justify-self-end lg:max-w-full">
             <Image className="" src={rocket} alt="Rocket" />
-          </motion.div>
+          </div>
         </div>
 
         <div className="visible  col-start-2 row-start-1 flex items-end justify-center md:hidden">
@@ -119,7 +100,12 @@ function HeroSection() {
         </div>
         <div className="col-start-2 row-start-3 flex items-center justify-center md:col-start-1">
           <motion.div
-            variants={delayFadeInUp}
+            variants={fadeInUp}
+            animate={{
+              transition: {
+                delay: 6,
+              },
+            }}
             whileHover={{
               rotate: -20,
               transition: { duration: 0.15 },

@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { formatter } from '../utils/helpers'
 import ProductOptions from './ProductOptions'
-import { CartContext } from '../context/shopContext'
+import CartContext from '../context/shopContext'
 import { motion } from 'framer-motion'
 
 const easing = [0.6, -0.5, 0.01, 0.99]
@@ -62,17 +62,6 @@ function ProductForm({ product }) {
   const setOptions = (name, value) => {
     setSelectedOptions((prev) => {
       return { ...prev, [name]: value }
-    })
-
-    const selection = {
-      ...selectedOptions,
-      [name]: value,
-    }
-
-    allVariantOptions.map((item) => {
-      if (JSON.stringify(item.options) === JSON.stringify(selection)) {
-        setSelectedVariant(item)
-      }
     })
   }
 

@@ -16,7 +16,7 @@ const shopifyData = async (query) => {
 
   try {
     const data = await fetch(URL, options).then((res) => res.json())
-    // console.log('data', data)
+    console.log('data', data)
     return data
   } catch (error) {
     throw new Error(error)
@@ -128,58 +128,6 @@ export const getProduct = async (handle) => {
   return product
 }
 
-export const createCheckout = async (id, quantity) => {
-  const query = `
-  mutation {
-    checkoutCreate(input: {lineItems: [{variantId: "${id}", quantity: ${quantity}}]}) {
-      checkout {
-        id
-        webUrl
-      }
-    }
-  }
-  `
-  const response = await shopifyData(query)
-
-  const checkout = response.data.checkoutCreate.checkout
-    ? response.data.checkoutCreate.checkout
-    : []
-
-  return checkout
-}
-
-export const updateCheckout = async (id, lineItem) => {
-  const lineItemsObject = lineItem.map((item) => {
-    return `{
-      variantId: "${item.id}",
-      quantity: ${item.variantQuantity}
-    }
-    `
-  })
-  const query = `
-      mutation {
-        checkoutLineItemsReplace(lineItems: [${lineItemsObject}], checkoutId: "${id}"){
-          checkout {
-            id
-            webUrl
-            lineItems(first: 25) {
-              edges {
-                node {
-                  title
-                  id
-                  quantity
-                }
-              }
-            }
-          }
-        }
-      }`
-
-  const response = await shopifyData(query)
-  console.log(response)
-  const checkout = response.data.checkoutLineItemsReplace.checkout
-    ? response.data.checkoutLineItemsReplace.checkout
-    : []
-
-  return checkout
+export const createCheckOut = async (id, quantity) => {
+  const query = {}
 }

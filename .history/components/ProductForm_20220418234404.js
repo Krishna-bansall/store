@@ -66,14 +66,10 @@ function ProductForm({ product }) {
 
     const selection = {
       ...selectedOptions,
-      [name]: value,
+      [name]: value
     }
 
-    allVariantOptions.map((item) => {
-      if (JSON.stringify(item.options) === JSON.stringify(selection)) {
-        setSelectedVariant(item)
-      }
-    })
+    allVariantOptions.map(item => {if (JSON.stringify(item.options) === JSON.stringify(selection))})
   }
 
   return (

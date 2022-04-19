@@ -71,7 +71,7 @@ function ProductForm({ product }) {
 
     allVariantOptions.map((item) => {
       if (JSON.stringify(item.options) === JSON.stringify(selection)) {
-        setSelectedVariant(item)
+        setSelectedVariant(itrm)
       }
     })
   }

@@ -95,7 +95,7 @@ function HeroSection() {
 
         <div className="col-start-2 row-start-1 hidden items-start md:visible md:row-start-2 md:grid ">
           <motion.div
-            // animate={{ x: [0, 200, 0] }}
+            animate={{ x: [0, 200, 0] }}
             className="absolute grid max-w-xs self-center justify-self-end lg:max-w-full"
           >
             <Image className="" src={rocket} alt="Rocket" />

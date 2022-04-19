@@ -21,7 +21,7 @@ export default function Nav() {
           </a>
         </Link>
         <a className="text-medium cursor pointer font-bold 2xl:text-2xl">
-          Cart ({cartQuantity})
+          Cart
         </a>
       </div>
     </header>

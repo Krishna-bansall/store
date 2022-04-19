@@ -162,15 +162,6 @@ export const updateCheckout = async (id, lineItem) => {
           checkout {
             id
             webUrl
-            lineItems(first: 25) {
-              edges {
-                node {
-                  title
-                  id
-                  quantity
-                }
-              }
-            }
           }
         }
       }`

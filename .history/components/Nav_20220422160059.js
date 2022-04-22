@@ -50,8 +50,8 @@ export default function Nav() {
                   buttons={['play', 'repeat', 'frame', 'debug']}
                 />
               </Player>
-              {/* {lottieRef.current.play()} */}
-              <div className="ml-5">Cart ({cartQuantity})</div>
+              {lottieRef.current.play()}
+              {/* <div className="ml-5">Cart ({cartQuantity})</div> */}
             </div>
           </a>
         </div>

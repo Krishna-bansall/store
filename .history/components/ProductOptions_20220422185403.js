@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 function ProductOptions({ name, values, selectedOptions, setOptions }) {
   return (
@@ -23,7 +22,7 @@ function ProductOptions({ name, values, selectedOptions, setOptions }) {
                   return setOptions(name, value)
                 }}
               />
-              <motion.div
+              <div
                 className={`my-3 mr-3 block cursor-pointer rounded-full p-2 text-lg ${
                   checked
                     ? 'bg-gray-900 text-white hover:bg-gray-800'
@@ -31,7 +30,7 @@ function ProductOptions({ name, values, selectedOptions, setOptions }) {
                 }`}
               >
                 <span className="px-2 ">{value}</span>
-              </motion.div>
+              </div>
             </label>
           )
         })}

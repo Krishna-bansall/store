@@ -51,7 +51,7 @@ export default function Nav() {
                 />
               </Player>
               {/* {lottieRef.current.play()} */}
-              <div className="ml-5">Cart ({cartQuantity})</div>
+              {/* <div className="ml-5">Cart ({cartQuantity})</div> */}
             </div>
           </a>
         </div>

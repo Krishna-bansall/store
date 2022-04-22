@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useContext, useRef, useEffect } from 'react'
+import { useContext } from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player'
 import { CartContext } from '../context/shopContext'
 import MiniCart from './MiniCart'
@@ -12,12 +12,6 @@ export default function Nav() {
   cart.map((item) => {
     return (cartQuantity += item?.variantQuantity)
   })
-
-  const lottieRef = useRef(null)
-
-  useEffect(() => {
-    lottieRef.current.play()
-  }, [cart])
 
   return (
     <>
@@ -37,11 +31,9 @@ export default function Nav() {
             <div className="flex flex-row">
               <Player
                 className="absolute -translate-y-5 -translate-x-8"
-                onStateChange={(cart) => console.log('dik', cart)}
-                ref={lottieRef}
+                onStateChange={(cart) => console.log(cart)}
                 // autoplay
                 // loop
-                isStopped={false}
                 src={animation}
                 style={{ height: '60px', width: '60px' }}
               >
@@ -50,8 +42,7 @@ export default function Nav() {
                   buttons={['play', 'repeat', 'frame', 'debug']}
                 />
               </Player>
-              {/* {lottieRef.current.play()} */}
-              <div className="ml-5">Cart ({cartQuantity})</div>
+              {/* <div className="ml-5">Cart ({cartQuantity})</div> */}
             </div>
           </a>
         </div>

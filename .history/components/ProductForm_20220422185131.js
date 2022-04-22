@@ -92,7 +92,7 @@ function ProductForm({ product }) {
         </motion.span>
 
         <div className="pt-2 pb-5">
-          {product.options.map(({ name, values }) => (
+          {/* {product.options.map(({ name, values }) => (
             <motion.div variants={fadeInUp}>
               <ProductOptions
                 key={`key-${name}`}
@@ -102,7 +102,7 @@ function ProductForm({ product }) {
                 setOptions={setOptions}
               />
             </motion.div>
-          ))}
+          ))} */}
         </div>
 
         <motion.button

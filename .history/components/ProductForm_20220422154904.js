@@ -109,6 +109,7 @@ function ProductForm({ product }) {
           variants={fadeInUp}
           onClick={() => {
             addToCart(selectedVariant)
+            setCartOpen(true)
           }}
           className="w-full rounded-lg bg-black px-2 py-3 text-white hover:bg-gray-800"
         >

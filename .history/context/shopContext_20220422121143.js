@@ -17,9 +17,6 @@ function ShopProvider({ children }) {
       } else if (cartObject[0].length > 0) {
         setCart([...cartObject[0]])
       }
-
-      setCheckoutId(cartObject[1].id)
-      setCheckoutUrl(cartObject[1].webUrl)
     }
   }, [])
 

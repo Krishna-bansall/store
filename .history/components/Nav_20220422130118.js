@@ -13,7 +13,7 @@ export default function Nav() {
 
   return (
     <>
-      <header className="sticky top-0 z-20 border-b  backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b  backdrop-blur-md">
         <div className="item-center flex max-w-6xl justify-between px-4 pt-6 pb-3 md:px-20 lg:max-w-full">
           <Link href="/" passHref>
             <a className="cursor-pointer">
@@ -30,9 +30,7 @@ export default function Nav() {
           </a>
         </div>
       </header>
-      <div className="z-40">
-        <MiniCart cart={cart} />
-      </div>
+      <MiniCart cart={cart} />
     </>
   )
 }
